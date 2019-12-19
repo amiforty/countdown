@@ -4,6 +4,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.css" type="text/css" />
+  
+  <style>
+    #clock {
+     text-align: center;
+      margin-top: 5vh;
+      
+    }
+    </style>
   </head>
   <body>
     
@@ -11,9 +19,20 @@
     
     <script>
   
-  var clock = $('#clock').FlipClock({
-});
+      var minsUntil = Math.round((new Date("2020-12-09 00:00:00") - new Date()) / 60000)
+      
+  var clock = $('#clock').FlipClock(minsUntil, {
     
+		clockFace: 'Counter'
+
+});
+
+	setTimeout(function() {
+		setInterval(function() {
+			clock.decrement();
+		}, 1000);
+	});    
+      
   </script>
     
     
