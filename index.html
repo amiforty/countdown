@@ -7,8 +7,9 @@
   
   <style>
     #clock {
-     text-align: center;
-      margin-top: 5vh;
+	    margin:auto;
+      margin-top: 15vh;
+	    width: 560px;
       
     }
     </style>
@@ -23,7 +24,8 @@
       
   var clock = $('#clock').FlipClock(minsUntil, {
     
-		clockFace: 'Counter'
+		clockFace: 'DailyCounter'
+	  countdown: true
 
 });
 
